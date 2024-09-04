@@ -7,8 +7,8 @@ import { SlMagnifier } from "react-icons/sl";
 export const Navbar = () => {
   return (
     <div>
-      <div className="w-full h-[44px] text-white bg-[#7E33E0] ">
-        <div className="w-[1280px] m-auto border flex justify-between items-center">
+      <div className="w-full h-[44px] text-white bg-[#7E33E0] flex items-center ">
+        <div className="w-[1280px] m-auto flex justify-between items-center">
           <div className="flex items-center gap-[66px]">
             <div className="flex items-center gap-3">
               <div>
@@ -56,7 +56,7 @@ export const Navbar = () => {
             </div>
           </div>
           <div className="flex items-center ">
-            <input className="border "></input>
+            <input className="border"></input>
             <div className="px-2 py-1 bg-[#FB2E86] h-full">
               <SlMagnifier className="text-white h-full" />
             </div>

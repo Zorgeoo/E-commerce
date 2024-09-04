@@ -1,6 +1,4 @@
 "use client";
-
-import { title } from "process";
 import React, { useState, useEffect } from "react";
 
 const Carousel = () => {
@@ -20,6 +18,8 @@ const Carousel = () => {
 
     return () => clearInterval(interval); // Clear interval on component unmount
   }, [currentSlide]);
+
+  console.log(currentSlide);
 
   const goToNextSlide = () => {
     setCurrentSlide((prevSlide) =>
@@ -60,17 +60,26 @@ const Carousel = () => {
         </div>
         <div className="flex gap-5 absolute bottom-10 left-[45%]">
           <div
-            className={`rounded-full w-5 h-5 border border-[#FB2E86] ${
+            onClick={() => {
+              setCurrentSlide(0);
+            }}
+            className={`rounded-full w-5 h-5 border cursor-pointer border-[#FB2E86] ${
               currentSlide === 0 ? "bg-[#FB2E86]" : ""
             }`}
           ></div>
           <div
-            className={`rounded-full w-5 h-5 border border-[#FB2E86] ${
+            onClick={() => {
+              setCurrentSlide(1);
+            }}
+            className={`rounded-full w-5 h-5 border cursor-pointer border-[#FB2E86] ${
               currentSlide === 1 ? "bg-[#FB2E86]" : ""
             }`}
           ></div>
           <div
-            className={`rounded-full w-5 h-5 border border-[#FB2E86] ${
+            onClick={() => {
+              setCurrentSlide(2);
+            }}
+            className={`rounded-full w-5 h-5 border cursor-pointer border-[#FB2E86] ${
               currentSlide === 2 ? "bg-[#FB2E86]" : ""
             }`}
           ></div>
